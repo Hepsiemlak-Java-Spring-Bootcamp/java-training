@@ -9,15 +9,16 @@ public class Main {
 
 		Kullanici kullanici1 = new Kullanici("Bireysel", "Cem", "cemdrman@gmailc.om");
 		kullanici1.mesajKutusu = prepareMesajKutusu();
-		
 
 		Kullanici kullanici2 = new Kullanici("Bireysel", "Kadir", "cilgin.kadir@gmail.com");
 		kullanici2.mesajKutusu = prepareMesajKutusu();
-		
 
 		Kullanici kullanici3 = new Kullanici("Bireysel", "Hatice", "hatice.dev@gmail.com");
 		kullanici3.mesajKutusu = prepareMesajKutusu();
-		
+
+		List<Kullanici> kullaniciList = new ArrayList<>();
+		kullaniciList.add(kullanici1);
+		kullaniciList.add(kullanici2);
 
 		List<Ilan> ilanListesi = new ArrayList<>();
 		ilanListesi.add(prepareIlan("Sahibinden Acil Satılık", kullanici1));
@@ -40,14 +41,14 @@ public class Main {
 		ilan.setBaslik(baslik);
 		ilan.setGayrimenkul(makeGayrimenkul());
 
-		//kullanici.mesajKutusu.add(new Mesaj("acil dönüş")); // NPE
+		// kullanici.mesajKutusu.add(new Mesaj("acil dönüş")); // NPE
 
 		ilan.setKullanici(kullanici);
 
 		ilan.setAktifMi(true);
 
 		ilan.setResimList(makeResimList());
-		
+
 		for (Mesaj mesaj : kullanici.mesajKutusu) {
 			System.out.println(mesaj.baslik);
 		}

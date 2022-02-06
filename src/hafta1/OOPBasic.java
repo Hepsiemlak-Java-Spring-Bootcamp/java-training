@@ -1,7 +1,5 @@
 package hafta1;
 
-import hafta1.model.Gayrimenkul;
-
 public class OOPBasic {
 
 	@SuppressWarnings("deprecation")
@@ -34,6 +32,5 @@ public class OOPBasic {
 		((D) b1).sum(); // Casting
 
 	}
-
 
 }
